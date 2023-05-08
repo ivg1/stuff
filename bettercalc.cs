@@ -43,7 +43,7 @@ class Project
                     }
                 }
             }
-            catch (DivideByZero e)
+            catch (DivideByZeroException e)
             {
                 Console.WriteLine("I hope you die.");
                 continue;
