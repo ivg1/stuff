@@ -48,12 +48,12 @@ class Project
                 Console.WriteLine("I hope you die.");
                 continue;
             }
-            catch (Exception e)
+            catch (FormatException e)
             {
-                Console.WriteLine("What? How?");
+                Console.WriteLine("Why?");
             }
-            Console.Write("Continue (y/n)? ");
-        } while (Console.ReadLine().ToUpper() == "Y");
+            control = true;
+        } while (true);
         Console.WriteLine($"The total is: {total}");
     }
 }
