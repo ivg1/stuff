@@ -13,7 +13,7 @@ class Project
         {
             try
             {
-                Console.Write($"Number to add to total ({total}): ");
+                Console.Write($"Number to total (Total is: {total}): ");
                 num = Convert.ToDouble(Console.ReadLine());
                 
                 while (control)
