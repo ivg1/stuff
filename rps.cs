@@ -11,12 +11,12 @@ class Project
             String botChoice = "";
             const String[] choices = {"R", "P", "S"};
             Random random = new Random();
-            int c = random.Next(0,choices.Length);
+            const int c = random.Next(0,3);
 
             while (true) 
             {
                 Console.Write("R/P/S: ");
-                switch (Console.ToUpper(Console.ReadLine()))
+                switch (Console.ReadLine().ToUpper())
                 {
                     case "R":
                         botChoice = choices[c];
@@ -25,7 +25,7 @@ class Project
                         botChoice = choices[c];
                         break;
                     case "S":
-                        botChoice = chocies[c];
+                        botChoice = choices[c];
                         break;
                     default:
                         Console.WriteLine("Only R/P/S.");
