@@ -43,6 +43,15 @@ class Project
                     }
                 }
             }
+            catch (DivideByZero e)
+            {
+                Console.WriteLine("I hope you die.");
+                continue;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("What? How?");
+            }
             Console.Write("Continue (y/n)? ");
         } while (Console.ReadLine().ToUpper() == "Y");
         Console.WriteLine($"The total is: {total}");
