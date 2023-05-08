@@ -5,13 +5,14 @@ class Project
     {
         Console.WriteLine("Rock is R, Paper is P, Scissors is S");
         Console.WriteLine("------------------------------------");
+        
         do
         { 
             String userChoice = "";
             String botChoice = "";
-            const String[] choices = {"R", "P", "S"};
             Random random = new Random();
-            const int c = random.Next(0,3);
+            String[] choices = {"R", "P", "S"};
+            int c = random.Next(0,3);
 
             while (true) 
             {
