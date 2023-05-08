@@ -45,6 +45,6 @@ class Project
             }
             Console.Write("Continue (y/n)? ");
         } while (Console.ReadLine().ToUpper() == "Y");
-        Console.WriteLine($"The total is: {total}")
+        Console.WriteLine($"The total is: {total}");
     }
 }
