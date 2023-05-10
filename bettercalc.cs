@@ -46,7 +46,6 @@ class Project
             catch (DivideByZeroException e)
             {
                 Console.WriteLine("I hope you die.");
-                continue;
             }
             catch (FormatException e)
             {
