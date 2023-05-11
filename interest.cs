@@ -43,7 +43,7 @@ class Project
                 double years = 0;
                 double end = 0;
 
-                double control1 = 0, control2 = 0, control3 = 0, control4 = 0;
+                double r = 0, brackets = 0, p = 0;
 
                 Console.Write("How much did you deposit (number)? ");
                 deposit = Convert.ToDouble(Console.ReadLine());
@@ -54,15 +54,10 @@ class Project
                 Console.Write("In how may years to see (number)? ");
                 years = Convert.ToDouble(Console.ReadLine());
 
-                control1 = interest/100;
-                control2 = 1+control1;
-                control3 = deposit*control2;
-                control4 = deposit/interest;
-                end = deposit;
-                for (int i = 0; i<years; i++)
-                {
-                    end += control4;
-                }
+                r = interest/100;
+                brackets = r*years + 1;
+                end = deposit * brackets;
+
                 Console.WriteLine($"-------- The total is ${end}\n");
 
             }
