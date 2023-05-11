@@ -1,3 +1,9 @@
+/*
+    - The Simple & Compound methods need to be finished.
+    - Some random things to add.
+    - Yeah.
+*/
+
 using System;
 class Project
 {
@@ -37,7 +43,7 @@ class Project
                 double years = 0;
                 double end = 0;
 
-                double control1 = 0, control2 = 0, control3 = 0;
+                double control1 = 0, control2 = 0, control3 = 0, control4 = 0;
 
                 Console.Write("How much did you deposit (number)? ");
                 deposit = Convert.ToDouble(Console.ReadLine());
@@ -51,7 +57,12 @@ class Project
                 control1 = interest/100;
                 control2 = 1+control1;
                 control3 = deposit*control2;
-                end = Math.Pow(control3, years);
+                control4 = deposit/interest;
+                end = deposit;
+                for (int i = 0; i<years; i++)
+                {
+                    end += control4;
+                }
                 Console.WriteLine($"-------- The total is ${end}\n");
 
             }
