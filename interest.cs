@@ -43,7 +43,7 @@ class Project
                 double years = 0;
                 double end = 0;
 
-                double r = 0, brackets = 0, p = 0;
+                double r = 0, brackets = 0;
 
                 Console.Write("How much did you deposit (number)? ");
                 deposit = Convert.ToDouble(Console.ReadLine());
@@ -87,7 +87,7 @@ class Project
                 double years = 0;
                 double end = 0;
 
-                double control1 = 0, brackets = 0, P_InEquation = 0, total = 0;
+                double r = 0, brackets = 0, control = 0;
 
                 Console.Write("How much did you deposit (number)? ");
                 deposit = Convert.ToDouble(Console.ReadLine());
@@ -98,16 +98,15 @@ class Project
                 Console.Write("In how may years to see (number)? ");
                 years = Convert.ToDouble(Console.ReadLine());
 
-                for (int i = 0; i<=years; i++)
+                control = years;
+                r = interest/100;
+                for (int i = 0; i<control; i++)
                 {
-                    control1 = interest/100;
-                    brackets = 1+control1;
-                    P_InEquation = deposit*brackets;
-                    end = Math.Pow(P_InEquation, i);  
+                    end = deposit * brackets;
                     deposit = end;
-                    total = deposit;
                 }
-                Console.WriteLine($"-------- The total is ${total}\n");
+
+                Console.WriteLine($"-------- The total is ${end}\n");
 
             }
             catch (FormatException e)
