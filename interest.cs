@@ -100,9 +100,10 @@ class Project
 
                 control = years;
                 r = interest/100;
-                for (int i = 0; i<control; i++)
+                brackets = r + 1;
+                for (int i = 0; i<years; i++)
                 {
-                    end = deposit * brackets;
+                    end = deposit*brackets;
                     deposit = end;
                 }
 
