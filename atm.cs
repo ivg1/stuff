@@ -60,7 +60,7 @@ class Project
 
     static void Invest()
     {
-        
+        Console.WriteLine("")
     }
     static void Send()
     {
