@@ -23,15 +23,14 @@ class Project
         while (true)
         {
             Console.WriteLine("Your balance is: $"+info.Balance);
-            while (true)
-            {
-                Console.WriteLine(@"Options:
+            Console.WriteLine(@"Options:
     1) Invest
     2) Send Money
     3) Earn Money
-    4) Transactions History
-
-Choose an option (number): ");
+    4) Transactions History");
+            while (true)
+            {
+                Console.Write("     Choose an option (number): ");
                 switch (Console.ReadLine())
                 {
                     case "1":
@@ -50,6 +49,9 @@ Choose an option (number): ");
                         Console.WriteLine("----------");
                         History();
                         break;
+                    default:
+                        Console.WriteLine("Invalid Option.");
+                        continue;
                 }
             }
         }
