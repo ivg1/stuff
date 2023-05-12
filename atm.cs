@@ -52,6 +52,7 @@ Choose an option (number): ");
                         break;
                 }
             }
+        }
     }
 
 
