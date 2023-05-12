@@ -1,7 +1,7 @@
 /*
-    - The Simple & Compound methods need to be finished.
-    - Some random things to add.
-    - Yeah.
+    - The Simple & Compound methods need to be finished. (done)
+    - Some random things to add. (done)
+    - Yeah. (yeah)
 */
 
 using System;
@@ -14,7 +14,6 @@ class Project
         while (true)
         {
             string choice = "";
-            Console.WriteLine("So uhh... the Compound Interest thing kinda broken so pls pls pls pls pls dont try using it and use the Simple Interest one instead\n");
             Console.Write("Simple/Compound Interest (S/C)? ");
             choice = Console.ReadLine().ToUpper();
             switch (choice)
