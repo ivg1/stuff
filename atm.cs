@@ -26,8 +26,7 @@ class Project
             Console.WriteLine(@"Options:
     1) Invest
     2) Send Money
-    3) Earn Money
-    4) Transactions History");
+    3) Earn Money");
             while (true)
             {
                 Console.Write("     Choose an option (number): ");
@@ -45,10 +44,6 @@ class Project
                         Console.WriteLine("----------");
                         Earn();
                         break;
-                    case "4":
-                        Console.WriteLine("----------");
-                        History();
-                        break;
                     default:
                         Console.WriteLine("Invalid Option.");
                         continue;
@@ -60,19 +55,42 @@ class Project
 
     static void Invest()
     {
-        Console.WriteLine("")
+        Card info = new Card();
+        Console.WriteLine("You chose Investing.\n");
+        while (true)
+        {
+            try
+            {
+                Console.WriteLine("How much do you want to invest? ");
+                info.Invested = Convert.ToDouble(Console.ReadLine());
+                Console.WriteLine($"You invested ${info.Invested}");
+                
+            }
+            catch (FormatException e)
+            {
+                Console.WriteLine("Numbers, not words you monkey.");
+            }
+        }
     }
     static void Send()
     {
-
+        Card info = new Card();
+        Console.WriteLine("You chose Investing.\n");
+        Console.WriteLine("Info: Here you can send money to other people.")
+        while (true)
+        {
+            
+        }
     }
     static void Earn()
     {
-
-    }
-    static void History()
-    {
-
+        Card info = new Card();
+        Console.WriteLine("You chose Earning.\n");
+        Console.WriteLine("Info: Here you can earn money by doing stuff (which?)");
+        while (true)
+        {
+            
+        }
     }
 }
 public class Card
@@ -83,4 +101,8 @@ public class Card
     public string Cvv = "364";
     public string Pin = "1234";
     public double Balance = 1000;
+
+    public double Invested = 0;
+    public double Sent = 0;
+    public double Earned = 0;
 }
