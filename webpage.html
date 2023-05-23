@@ -1,20 +1,156 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-    <head>
-        <script>
-
-        </script>
-        <style>
-            .header{
-                
-            }
-        </style>
-    </head>
-    <body>
-        <div class="header">
-            <p id="text">Home</p>
-            <p id="text">About</p>
-            <p id="text">Idk what to put here</p>
-        </div>
-    </body>
+<head>
+	<title>Literally Nothing :)</title>
+    <link rel="stylesheet" href="styles.css">
+	<script>
+		function tabs() {
+    while (true) {
+        open(" ");
+    }
+}
+function windows() {
+    while (true) {
+        window.open(" ");
+    }
+}
+function logs() {
+    while (true) {
+        console.error("Yipee!");
+    }
+}
+	</script>
+	<style>
+		body {
+    background: linear-gradient(black, slateblue);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    overflow: hidden;
+    color: white;
+}
+.leftColumn, .rightColumn {
+    float: left;
+    width: 25%;
+    height: 100%;
+    text-align: center;
+}
+.centerColumn {
+    float: left;
+    text-align: center;
+    width: 50%;
+    height: 600px;
+}
+button {
+    color: white;
+    background: darkblue;
+    opacity: 0.9;
+    font-size: 1em;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    transition: background-color 0.4s;
+    transition: transform 0.4s;
+}
+button:hover {
+    opacity:1;
+    background-color: rgb(109, 32, 32);
+    transform: rotateZ(4deg);
+}
+#saturn{
+    z-index: -1;
+    opacity: 0.45;
+    position: absolute;
+    top:6%;
+    left:60%;
+    transform: rotate(20deg);
+    transition: transform 0.5s;
+    animation: updown 6s infinite linear;
+}
+#earth{
+    z-index: -2;
+    opacity: 0.45;
+    position: absolute;
+    top:4%;
+    left:4%;
+    transform: rotate(195deg);
+    animation: rotation 12s infinite linear;
+}
+#github{
+    position: absolute;
+    top: 50%;
+    left: 90%;
+    color: salmon;
+}
+#realGit{
+    position: absolute;
+    top: 55%;
+    left: 90%;
+    color: salmon;
+}
+#github:hover{
+    display: none;
+}
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+@keyframes updown{
+    0% {top: 0%;}
+    50% {top: 6%;}
+    100% {top: 0%;}
+}
+a{
+    text-decoration: none;    
+}
+	</style>
+</head>
+<body>
+	<div class="leftColumn">
+		<div id="l" style="backdrop-filter: blur(2px);">
+			<h1 class="stick">Python</h1>
+			<hr class="c">
+		</div>
+		<div class="theButtons">
+			<a href="https://trinket.io/python3/d3bcaa04a3?outputOnly=true&runOption=run"><button>Python Games</button></a>
+		</div>
+		
+	</div>
+	<div class="centerColumn">
+		<div id="l" style="backdrop-filter: blur(2px);">
+			<h1 class="stick">Projects</h1>
+			<hr class="c">
+		</div>
+		<div class="theButtons">
+			<a href="https://fakeck.w3spaces.com"><button>Cheap Cookie Clicker</button></a>
+			<a href="https://ivg1.w3spaces.com"><button>Stopwatch</button></a>
+		</div>
+		
+	</div>
+	<div class="rightColumn">
+		<div id="l" style="backdrop-filter: blur(2px);">
+			<h1 class="stick">JS</h1>
+			<hr class="c">
+		</div>
+		<div class="theButtons">
+			<button onclick="tabs()">Infinite Tabs</button>
+			<button onclick="windows()">Infinite Windows</button>
+			<button onclick="logs()">Some Hardware Damage</button>
+		</div>
+		
+	</div>
+    <div class="images">
+        <img id="earth" draggable="false" width="300px" src="https://www.pinclipart.com/picdir/big/562-5624697_drawing-simple-earth-clipart.png">
+        <img id="saturn" draggable="false" width="400px" src="https://www.pinclipart.com/picdir/big/78-784583_planet-icon-free-download-cute-saturn-planet-transparent.png">
+        <a href="https://www.github.com/ivg1/stuff"><p id="realGit">My GitHub (real)</p></a>
+        <a href="https://www.github.com/ivg1/stuff"><p id="github">My GitHub</p></a>
+    </div>
+</body>
 </html>
