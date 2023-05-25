@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script>
+		
+		</script>
+		<style>
+		body{
+	background-color: bisque;
+	margin: 1%;
+  font-size: 12px;
+}
+.upgrades{
+	float: right;
+	width: 20%;
+	text-align: center;
+	margin-right: 2%;
+}
+.items{
+	background-color: brown;
+  color: white;
+  display: flex;
+	text-align: center;
+	padding: 0% 10%;
+  border-radius: 15px;
+margin: 4% 0%;
+transition: transform 0.5s;
+}
+.items:hover{
+	transform: scale(1.1);
+}
+
+.left{
+	float: left;
+	height: 100%;
+	width: 30%;
+	display: flex;
+	justify-content: center;
+	position: relative;
+	display: block;
+}
+#cookie{
+	width: 200px;
+	height: 200px;
+	border-radius: 50%;
+}
+		</style>
+	</head>
+	<body>
+		<div class="upgrades">
+		    <div class="items" id="cursor" onclick="buyCursor">
+           	<p>Cursor - <span class="cursorCost">10</span> Cookies</p>
+			</div>
+			<div class="items" id="grandma" onclick="buyGrandma">
+				<p>Grandma - <span class="grandmaCost">100</span> Cookies</p>
+			</div>
+			<div class="items" id="farm" onclick="buyFarm">
+				<p>Farm - <span class="farmCost">1000</span> Cookies</p>
+			</div>
+       </div>
+       <div class="left">
+			<img id="cookie" src="https://i.ibb.co/fk62qQB/2-E5475-B6-8-A87-4-C98-9652-77-D8-C10995-D4.png" alt="72-E6-A480-88-AC-43-B7-88-C6-D97-AEC8-CF4-D9" border="0">
+       </div>
+	</body>
+</html>
