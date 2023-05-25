@@ -5,26 +5,30 @@
 		
 		</script>
 		<style>
-		body{
+html{
 	background-color: bisque;
 	margin: 1%;
-  font-size: 12px;
+	font-size: 12px;
+	cursor:default;
 }
 .upgrades{
-	float: right;
-	width: 20%;
-	text-align: center;
-	margin-right: 2%;
+float: right;
+width: 20%;
+height: auto;
+text-align: center;
+margin-right: 2%;
 }
 .items{
-	background-color: brown;
-  color: white;
-  display: flex;
-	text-align: center;
-	padding: 0% 10%;
-  border-radius: 15px;
+background-color: brown;
+color: white;
+display: flex;
+text-align: center;
+padding: 0% 10%;
+border-radius: 15px;
 margin: 4% 0%;
 transition: transform 0.5s;
+height: 30px;
+text-align: center;
 }
 .items:hover{
 	transform: scale(1.1);
@@ -49,7 +53,7 @@ transition: transform 0.5s;
 	<body>
 		<div class="upgrades">
 		    <div class="items" id="cursor" onclick="buyCursor">
-           	<p>Cursor - <span class="cursorCost">10</span> Cookies</p>
+           		<p>Cursor - <span class="cursorCost">10</span> Cookies</p>
 			</div>
 			<div class="items" id="grandma" onclick="buyGrandma">
 				<p>Grandma - <span class="grandmaCost">100</span> Cookies</p>
