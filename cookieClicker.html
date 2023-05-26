@@ -2,25 +2,36 @@
 <html oncontextmenu="return false">
 	<head>
 		<script>
+const cookieButton = document.querySelector(".cookie");
+
+window.addEventListener('mousemove', (event) => {
+  mousePos = { x: event.clientX, y: event.clientY };
+  mousePosText.textContent = `(${mousePos.x}, ${mousePos.y})`;
+});
+
+
 let cookies = 0;
 let perClick = 1;
 let perSecond = 0;
 
 function addCookies() {
+	const cookieButton = document.querySelector(".cookie");
+
 	cookies += perClick;
 	document.querySelector(".amount").innerHTML = cookies;
-	setTimeout(zoom, 1);
+	
+	// Set image size to 1.5 times original
+	cookieButton.style.transform = "scale(1.1)";
+    // Animation effect
+    cookieButton.style.transition = "transform 0.05s ease";
+
+	setTimeout(reset, 100);
 }
-function zoom(){
-	let c = 0;
-	if (c===0){
-		document.querySelector(".cookie").style.transform = "scale(1.1)";
-		c++;
-		setTimeout(zoom, 1);
-	} else{
-		document.querySelector(".cookie").style.transform = "scale(0.9)";
-		c = 0;
-	}
+function reset(){
+	const cookieButton = document.querySelector(".cookie");
+
+	cookieButton.style.transform = "scale(1)";
+    cookieButton.style.transition = "transform 0.15s ease";
 }
 		</script>
 		<style>
