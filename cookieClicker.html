@@ -2,14 +2,34 @@
 <html oncontextmenu="return false">
 	<head>
 		<script>
-		
+let cookies = 0;
+let perClick = 1;
+let perSecond = 0;
+
+function addCookies() {
+	cookies += perClick;
+	document.querySelector(".amount").innerHTML = cookies;
+	setTimeout(zoom, 1);
+}
+function zoom(){
+	let c = 0;
+	if (c===0){
+		document.querySelector(".cookie").style.transform = "scale(1.1)";
+		c++;
+		setTimeout(zoom, 1);
+	} else{
+		document.querySelector(".cookie").style.transform = "scale(0.9)";
+		c = 0;
+	}
+}
 		</script>
 		<style>
 html{
 	background-color: bisque;
 	margin: 1%;
 	font-size: 12px;
-	cursor:default;
+	cursor: default;
+	user-select: none;
 }
 .upgrades{
 float: right;
@@ -44,17 +64,26 @@ align-items: center;
 	position: relative;
 	display: block;
 }
-#cookie{
+.cookie{
 	width: 200px;
 	height: 200px;
 	border-radius: 50%;
+}
+
+.size{
+	font-size: 24px;
+	display: flex;
+}
+.container{
+	width: 30%;
+	margin: 0px;
 }
 		</style>
 	</head>
 	<body>
 		<div class="upgrades">
 		    <div class="items" id="cursor" onclick="buyCursor">
-           		<p>Cursor - <span class="cursorCost">10</span> Cookies</p>
+           	<p>Cursor - <span class="cursorCost">10</span> Cookies</p>
 			</div>
 			<div class="items" id="grandma" onclick="buyGrandma">
 				<p>Grandma - <span class="grandmaCost">100</span> Cookies</p>
@@ -64,7 +93,8 @@ align-items: center;
 			</div>
        </div>
        <div class="left">
-			<img draggable="false" id="cookie" src="https://i.ibb.co/fk62qQB/2-E5475-B6-8-A87-4-C98-9652-77-D8-C10995-D4.png" alt="72-E6-A480-88-AC-43-B7-88-C6-D97-AEC8-CF4-D9" border="0">
+			<div class="container"><pre class="size"><span class="amount size">0</span> Cookies</pre></div>
+			<img onclick="addCookies()" draggable="false" class="cookie" src="https://i.ibb.co/fk62qQB/2-E5475-B6-8-A87-4-C98-9652-77-D8-C10995-D4.png" alt="72-E6-A480-88-AC-43-B7-88-C6-D97-AEC8-CF4-D9" border="0">
        </div>
 	</body>
 </html>
