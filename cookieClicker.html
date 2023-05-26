@@ -4,18 +4,21 @@
 		<script>
 const cookieButton = document.querySelector(".cookie");
 
-window.addEventListener('mousemove', (event) => {
-  mousePos = { x: event.clientX, y: event.clientY };
-  mousePosText.textContent = `(${mousePos.x}, ${mousePos.y})`;
-});
-
-
 let cookies = 0;
 let perClick = 1;
 let perSecond = 0;
 
 function addCookies() {
 	const cookieButton = document.querySelector(".cookie");
+	const num = document.createElement("h3");
+
+	let mousePos = { x: undefined, y: undefined };
+	mousePos = { x: event.clientX, y: event.clientY };
+	cookieButton.appendChild(num);
+	num.style.position = "absolute";
+	num.style.top = `$"{mousepos.x}";`
+	num.style.left = `$"{mousePos.y}";`
+
 
 	cookies += perClick;
 	document.querySelector(".amount").innerHTML = cookies;
