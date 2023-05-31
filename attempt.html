@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html style="user-select: none;">
     <head>
         <style>
             body{
@@ -18,7 +18,13 @@
             
         </style>
         <script>
-            
+            document.onkeydown = function(e){
+                let keyDown = e.key;
+                if (e.key === "F12"){
+                    return false;
+                }
+                console.log(`$"blocked {keyDown} key"`);
+            }
         </script>
     </head>
     <body>
