@@ -15,6 +15,13 @@
                 align-items: center;
                 padding: 2px 7px; 
             }
+            #company_name{
+                font-size: 18px;
+                font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            }
+            .logo{
+                margin-right: 6px;
+            }
             
         </style>
         <script>
@@ -25,11 +32,13 @@
                 }
                 console.log(`$"blocked {keyDown} key"`);
             }
+
+            const logo = document.querySelector(".logo")
         </script>
     </head>
     <body>
         <div class="header">
-            <img draggable="false" src="https://www.seekpng.com/png/full/278-2788585_andrew-nico-jupiter-cartoon-png.png" width="50px" />
+            <img class="logo" draggable="false" src="https://www.seekpng.com/png/full/278-2788585_andrew-nico-jupiter-cartoon-png.png" width="50px" />
             <h1 id="company_name">Jupiter Corp.</h1>
         </div>
         
