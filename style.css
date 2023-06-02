@@ -1,0 +1,97 @@
+body{
+	background-color: black; /* rgb(21,32,43) */
+	color: white;
+	margin: 0px;
+	overflow: hidden;
+}
+            div.header{
+                background-color:rgb(0, 0, 43);
+                height: 100px;
+                width: 100%;
+                display: flex;
+                align-items: center;
+                padding: 2px 7px; 
+            }
+            #company_name{
+                margin-right: 20px;
+                font-size: 24px;
+                font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            }
+            img.logo{
+                margin-right: 6px;
+            }
+            .links{
+                margin: 0px 14px;
+                color: rgb(238, 235, 235);
+                font-size: 20px;
+            }
+            .links:hover{
+                text-decoration: underline;
+            }
+            a{
+                text-decoration: none;
+            }
+            .together{
+                width: auto;
+                height: auto;
+                display: flex;
+                align-items: center;
+            }
+            
+
+.left_body{
+	height: 500px;
+	width: 50%;
+	float: left;
+	margin: 0px;
+	display: grid;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+	
+}
+.right_body{
+	height: 500px;
+	width: 50%;
+	float: left;
+	margin: 0px;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	display: block;
+}
+.extra{
+	position: absolute;
+	opacity: 0.6;
+}
+.rocket{
+	top: 300px;
+	left: 100px;
+	transform: rotateZ(55deg);
+	z-index: -1;
+}
+.earth{
+	top: 285px;
+	left: 290px;
+	transform: rotateZ(-40deg);
+	z-index: -2;
+}
+#message_welcome{
+	font-size: 80px;
+}
+.quickAccess{
+	width: 150px;
+	height: 50px;
+	margin: 5px;
+	background-color: tomato;
+	color: white;
+	border: none;
+	border-radius: 15px;
+	font-size: 17px;
+	transition: filter 0.6s;
+	filter: brightness(75%);
+}
+.quickAccess:hover{
+	filter: brightness(100%);
+}
