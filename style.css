@@ -2,43 +2,41 @@ body{
 	background-color: black; /* rgb(21,32,43) */
 	color: white;
 	margin: 0px;
-	overflow: hidden;
+	overflow-x: hidden;
 }
-            div.header{
-                background-color:rgb(0, 0, 43);
-                height: 100px;
-                width: 100%;
-                display: flex;
-                align-items: center;
-                padding: 2px 7px; 
-            }
-            #company_name{
-                margin-right: 20px;
-                font-size: 24px;
-                font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-            }
-            img.logo{
-                margin-right: 6px;
-            }
-            .links{
-                margin: 0px 14px;
-                color: rgb(238, 235, 235);
-                font-size: 20px;
-            }
-            .links:hover{
-                text-decoration: underline;
-            }
-            a{
-                text-decoration: none;
-            }
-            .together{
-                width: auto;
-                height: auto;
-                display: flex;
-                align-items: center;
-            }
-            
-
+div.header{
+    background-color:rgb(0, 0, 43);
+    height: 100px;
+	width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 2px 7px; 
+}
+#company_name{
+    margin-right: 20px;
+    font-size: 24px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+img.logo{
+    margin-right: 6px;
+}
+.links{
+    margin: 0px 14px;
+    color: rgb(238, 235, 235);
+    font-size: 20px;
+}
+.links:hover{
+    text-decoration: underline;
+}
+a{
+    text-decoration: none;
+}
+.together{
+    width: auto;
+    height: auto;
+    display: flex;
+    align-items: center;
+}
 .left_body{
 	height: 500px;
 	width: 50%;
@@ -48,7 +46,6 @@ body{
 	justify-content: center;
 	align-items: center;
 	overflow: hidden;
-	
 }
 .right_body{
 	height: 500px;
@@ -87,14 +84,40 @@ body{
 	width: 150px;
 	height: 50px;
 	margin: 5px;
-	background-color: tomato;
-	color: white;
+	background-color: rgb(241, 58, 25);
+	color: rgb(255, 255, 255);
 	border: none;
 	border-radius: 15px;
 	font-size: 17px;
-	transition: filter 0.6s;
+	transition: filter 0.5s;
 	filter: brightness(75%);
 }
 .quickAccess:hover{
 	filter: brightness(100%);
+}
+.achievements{
+	width: 100%;
+	height: 600px;
+	background-color: whitesmoke;
+	float: left;
+	color: black;
+}
+.achievements_header{
+	width: 100%;
+	height: auto;
+	text-align: center;
+}
+.achievements_right{
+	float: left;
+	width: 50%;
+	height: 500px;
+	margin: none;
+	text-align: center;
+}
+.achievements_left{
+	float: left;
+	width: 50%;
+	height: 500px;
+	margin: none;
+	text-align: center;
 }
