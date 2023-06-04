@@ -67,18 +67,21 @@ body{
 }
 .rocket{
 	top: 300px;
-	left: 100px;
+	left: 60px;
 	transform: rotateZ(55deg);
 	z-index: -1;
 }
 .earth{
 	top: 285px;
-	left: 290px;
+	left: 240px;
 	transform: rotateZ(-40deg);
 	z-index: -2;
 }
 #message_welcome{
 	font-size: 80px;
+	position: absolute;
+	top: 220px;
+	left: 65px;
 }
 .quickAccess{
 	width: 150px;
